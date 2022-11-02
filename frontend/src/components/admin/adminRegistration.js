@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./adminRegistration.css";
 import axios from "axios";
 
-export default function AdminRegistration() {
+import "./adminRegistration.css";
+export default function AdminRegistration({ sideImage }) {
   const [admin, setAdmin] = useState({
     firstName: "",
     middleName: "",
@@ -29,7 +29,7 @@ export default function AdminRegistration() {
     axios(config)
       .then(function(res) {
         console.log(res);
-        alert("Admin Registration Succesfull go back to Admin Login Page.");
+        alert("Admin Registration Successfull go back to Admin Login Page.");
       })
       .catch(function(err) {
         console.log(err);
@@ -46,72 +46,105 @@ export default function AdminRegistration() {
 
   return (
     <>
-      <div id="registration">
-        <div id="registrationForm">
-          <div>Registration For Admin</div>
-          <label htmlFor="firstName">First name:</label>
-          <br />
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={admin.firstName}
-            onChange={handleOnChange}
-          />
-          <br />
-          <label htmlFor="middleName">Middle name:</label>
-          <br />
-          <input
-            type="text"
-            id="middleName"
-            name="middleName"
-            value={admin.middleName}
-            onChange={handleOnChange}
-          />
-          <br />
-          <label htmlFor="lastName">Last name:</label>
-          <br />
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={admin.lastName}
-            onChange={handleOnChange}
-          />
-          <br />
-          <label htmlFor="email">Email:</label>
-          <br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={admin.email}
-            onChange={handleOnChange}
-          />
-          <br />
-          <label htmlFor="password">Password:</label>
-          <br />
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={admin.password}
-            onChange={handleOnChange}
-          />
-          <br />
-          <label htmlFor="confirmPassword">Confirm Password:</label>
-          <br />
-          <input
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            value={admin.confirmPassword}
-            onChange={handleOnChange}
-          />
-          <br />
-          <button type="submit" defaultValue="Submit" onClick={handleOnClick}>
-            Submit
-          </button>
+      <div className="register">
+        <div className="col-1">
+          <img src={sideImage} alt="Voting" id="sideImageAdmin" />
+        </div>
+        <div className="col-2">
+          <h2>Admin Registration</h2>
+          <span>Create Admin Account</span>
+          <form id="form" className="flex flex-col">
+            <div className="inputContainer">
+              <label htmlFor="firstName" className="labelPosition">
+                First name:
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={admin.firstName}
+                onChange={handleOnChange}
+                required
+              />
+            </div>
+            <div className="inputContainer">
+              <label htmlFor="middleName" className="labelPosition">
+                Middle name:
+              </label>
+
+              <input
+                type="text"
+                id="middleName"
+                name="middleName"
+                value={admin.middleName}
+                onChange={handleOnChange}
+              />
+            </div>
+            <div className="inputContainer">
+              <label htmlFor="lastName" className="labelPosition">
+                Last name:
+              </label>
+
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={admin.lastName}
+                onChange={handleOnChange}
+              />
+            </div>
+            <div className="inputContainer">
+              <label htmlFor="email" className="labelPosition">
+                Email:
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={admin.email}
+                onChange={handleOnChange}
+                required
+              />
+            </div>
+            <div className="inputContainer">
+              <label htmlFor="password" className="labelPosition">
+                Password:
+              </label>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={admin.password}
+                onChange={handleOnChange}
+                required
+              />
+            </div>
+            <div className="inputContainer">
+              <label htmlFor="confirmPassword" className="labelPosition">
+                Confirm Password:
+              </label>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={admin.confirmPassword}
+                onChange={handleOnChange}
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              defaultValue="Submit"
+              className="btn"
+              onClick={handleOnClick}
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </>
