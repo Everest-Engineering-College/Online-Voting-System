@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import "./adminRegistration.css";
 export default function AdminRegistration({ sideImage }) {
   const [admin, setAdmin] = useState({
     firstName: "",

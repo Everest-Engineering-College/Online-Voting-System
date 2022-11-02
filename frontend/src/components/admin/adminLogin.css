@@ -1,88 +1,10 @@
-/* *{
-    margin: 0;
-    box-sizing: border-box;
-    
-}
-
-/* body{
-     background-color: rgb(17, 33, 65);
-} */
-
-/* #login{
-    width: 100vw;
-    height: 100vh;
-    background : linear-gradient(rgba(0,0,0,0.5),rgb(0,0,0,0.5)), url('../../Images/loginVote.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-    position: relative;
-
-    
-    
-  
-   
-    
-   
-    
-    
-}
-
-
-
-
-#loginForm{
-
-   color: rgb(0, 0, 0);
-   background-color: rgba(255, 255, 255, 0.744);
-
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%);
-   padding: 1.2em;
-   box-shadow: 5px 10px #888888;
-   font-size: 1.1rem;
- 
-    
-}
-
-#loginForm h3{
-    text-align: center;
-    padding: 0.5em;
-    font-size: 2rem;
-}
-
-#loginForm input:focus{
-   
-    outline: none;
-    border: 2px solid  rgb(17, 33, 65);
-    border-radius: 5px;
-}
-#loginForm button{
-    font-size: 1.2rem;
-    border-radius: 10px;
-    
-    position: absolute;
-    left: 35%;
-    bottom: 1%;
-    
-    padding: 0.3em;
-}
-button:hover{
-    background-color: rgb(17, 33, 65) ;
-    color: white;
-    border-radius: 10px;
-    
-
-} */ 
-
 #sideImageAdmin {
-    width: 500px;
-    height: 100%;
-    object-fit: cover;
-    align-self: flex-end;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 5px;
-    border-radius: 8px 0 0 8px;
-    box-shadow: 1px 0 2px 1px ecfff9;
-  }
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  align-self: flex-end;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 5px;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 1px 0 2px 1px #ecfff9;
+}

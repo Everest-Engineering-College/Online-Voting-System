@@ -156,11 +156,13 @@ export default function Admin() {
 
   return (
     <div className="adminContainer">
-      <h1>Welcome To Admin Page</h1>
-      <Link onClick={handleLogOut} to="/">
-        Log Out
-      </Link>
-      <br />
+      <div className="adminContainer__header">
+        <h1>Welcome To Admin Page</h1>
+        <Link onClick={handleLogOut} to="/">
+          Log Out
+        </Link>
+      </div>
+
       {admin && <Link to="/userRegistration">User Registration</Link>}
       <br />
       {admin && <Link to="/candidateRegistration">Candidate Registration</Link>}
@@ -180,7 +182,7 @@ export default function Admin() {
           );
         })}
       <button type="button" onClick={handleUsers}>
-        Show All Candidate
+        Show All User
       </button>
       {user && <h2>User List</h2>}
       {user &&

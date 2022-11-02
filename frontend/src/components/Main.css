@@ -8,21 +8,19 @@
     
 } */
 
-
-
 /* 
 Declaring Variables
 */
 :root {
-    --primaryColor: #ecfff9;
-    --btnColor: #003049;
-    --backgroundColor: #f1faee;
-  }
-  
-  /*
+  --primaryColor: #ecfff9;
+  --btnColor: #003049;
+  --backgroundColor: #f1faee;
+}
+
+/*
     FORM CHOOSE
     */
-  /* .choose {
+/* .choose {
     width: 20vw;
     height: 40vh;
     display: flex;
@@ -30,196 +28,214 @@ Declaring Variables
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
     padding: 30px 20px 20px 20px;
   } */
-  .chooseContainer {
-    min-width: 20vw;
-    min-height: 40vh;
-    border-radius: 8px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-    padding: 30px 20px 20px 20px;
-    background-color: var(--primaryColor);
-  
-    /* width: 100%; */
-  }
-  .chooseHeading {
-    border-bottom: 1px solid grey;
-  
-    width: 100%;
-  }
-  .chooseHeading > h5 {
-    margin-bottom: 15px;
-    color: rgb(81, 81, 81);
-    font-size: 20px;
-    text-align: left;
-  }
-  .chooseHeading > h4 {
-    font-size: 24px;
-    font-weight: 600;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .chooseItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 30%;
-    margin-top: 15px;
-    align-items: flex-start;
-    row-gap: 10px;
-  }
-  .chooseItem > div {
-    width: 100%;
-    /* height: 40px; */
-    border-bottom: 1px solid black;
-    padding-bottom: 25px;
-    text-align: left;
-    position: relative;
-    padding-top: 10px;
-    transition: all 0.15s ease-in-out;
-  }
-  .chooseItem > div:hover {
-    cursor: pointer;
-    background-color: rgba(205, 255, 253, 0.629);
-    border-radius: 5px;
-    transform: scale(1.1);
-  }
-  .chooseItem > div > span {
-    display: flex;
-    column-gap: 10px;
-  }
-  .chooseItem > div > p {
-    font-size: 12px;
-    font-weight: 300;
-    position: absolute;
-    color: grey;
-    left: 40px;
-    top: 35px;
-    bottom: 6px;
-  }
-  /* 
+.chooseContainer {
+  min-width: 20vw;
+  min-height: 40vh;
+  border-radius: 8px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px 20px 20px 20px;
+  background-color: var(--primaryColor);
+
+  /* width: 100%; */
+}
+.chooseHeading {
+  border-bottom: 1px solid grey;
+
+  width: 100%;
+}
+.chooseHeading > h5 {
+  margin-bottom: 15px;
+  color: rgb(81, 81, 81);
+  font-size: 20px;
+  text-align: left;
+}
+.chooseHeading > h4 {
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.chooseItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%;
+  margin-top: 15px;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+.chooseItem > div {
+  width: 100%;
+  /* height: 40px; */
+  border-bottom: 1px solid black;
+  padding-bottom: 25px;
+  text-align: left;
+  position: relative;
+  padding-top: 10px;
+  transition: all 0.15s ease-in-out;
+}
+.chooseItem > div:hover {
+  cursor: pointer;
+  background-color: rgba(205, 255, 253, 0.629);
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+.chooseItem > div > span {
+  display: flex;
+  column-gap: 10px;
+}
+.chooseItem > div > p {
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  color: grey;
+  left: 40px;
+  top: 35px;
+  bottom: 6px;
+}
+/* 
     FORM STYLING
     */
-  
-  .register {
-    position: relative;
-    max-width: 978px;
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    border-radius: 8px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-    background-color: var(--primaryColor);
-    /* filter: blur(8px); */
-  }
-  
-  .register span {
-    color: #adb5bd;
-  }
-  .register h2 {
-    font-size: 28px;
-  }
-  #form {
-    max-width: 320px;
-    width: 100vw;
-    margin: 2em auto;
-  }
-  
-  #form > div > input {
-    border: 1px solid #e9ecef;
-    padding: 0.9em 1em;
-    width: 20rem;
-    height: 3rem;
-    border-radius: 5px;
-  }
-  
-  #form > div > input:focus {
-    outline: none;
-  }
-  
-  #form > .btn {
-    background-color: var(--btnColor);
-    color: #e9ecef;
-    font-size: 1em;
-    cursor: pointer;
-  }
-  
-  .register .col-2 {
-    margin: auto;
-    padding: 3em 0;
-  }
-  
-  .inputContainer {
-    position: relative;
-  }
-  
-  .labelPosition {
-    font-size: 16px;
-    position: absolute;
-    font-family: "inter", sans-serif;
-    font-style: italic;
-    font-weight: 600;
-    left: 20px;
-    top: -7px;
-    background-color: var(--primaryColor);
-    letter-spacing: 1px;
-  }
-  input:placeholder-shown {
-    font-style: italic;
-  }
-  .btn {
-    border: 1px solid #e9ecef;
-    margin: 15px 0px 0px 90px;
-  
-    width: 10rem;
-    height: 3rem;
-    border-radius: 5px;
-    background-color: var(--btnColor);
-    color: #e9ecef;
-    font-size: 1em;
-    cursor: pointer;
-  }
-  .setPassword {
-    font-weight: medium;
-    margin: 10px;
-    font-size: 16px;
-    color: rgb(58, 58, 58);
-    font-style: italic;
-  }
-  .setPassword a {
-    color: #1d7470;
-  }
-  .setPassword a:hover {
-    color: #003049;
-  }
-  
-  /* 
+
+.register {
+  position: relative;
+  max-width: 978px;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--primaryColor);
+  /* filter: blur(8px); */
+}
+
+.register span {
+  color: #adb5bd;
+}
+.register h2 {
+  font-size: 28px;
+}
+#form {
+  max-width: 320px;
+  width: 100vw;
+  margin: 2em auto;
+}
+
+#form > div > input {
+  border: 1px solid #e9ecef;
+  /* padding: 0.9em 1em; */
+  width: 20rem;
+  height: 3rem;
+  border-radius: 5px;
+}
+
+#form > div > input:focus {
+  outline: none;
+}
+
+#form > .btn {
+  background-color: var(--btnColor);
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.register .col-2 {
+  margin: auto;
+  padding: 3em 0;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.labelPosition {
+  font-size: 16px;
+  position: absolute;
+  font-family: "inter", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  left: 20px;
+  top: -7px;
+  background-color: var(--primaryColor);
+  letter-spacing: 1px;
+}
+input:placeholder-shown {
+  font-style: italic;
+}
+.btn {
+  border: 1px solid #e9ecef;
+  margin: 15px 0px 0px 90px;
+
+  width: 10rem;
+  height: 3rem;
+  border-radius: 5px;
+  background-color: var(--btnColor);
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+.setPassword {
+  font-weight: medium;
+  margin: 10px;
+  font-size: 16px;
+  color: rgb(58, 58, 58);
+  font-style: italic;
+}
+.setPassword a {
+  color: #1d7470;
+}
+.setPassword a:hover {
+  color: #003049;
+}
+
+/* 
     Back Button
     */
-  #backBtn {
-    position: absolute;
-    bottom: 10px;
-    right: 40px;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  #backBtn:hover {
-    color: #0b2e41;
-    transform: scale(1.1);
-  }
-  
-  /* 
+#backBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+#backBtn:hover {
+  color: #0b2e41;
+  transform: scale(1.1);
+}
+
+/* 
+        ADMIN
+  */
+
+.adminContainer {
+  position: relative;
+  min-width: 95%;
+  min-height: 95%;
+}
+.adminContainer__header {
+  display: flex;
+  justify-content: space-around;
+}
+.adminContainer__body {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 
     Flexbox
     */
-  .flex {
-    display: flex;
-    gap: 1em;
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+@media screen and (min-width: 860px) {
+  .register .col-1 img {
+    display: initial;
   }
-  
-  .flex-col {
-    flex-direction: column;
-  }
-  @media screen and (min-width: 860px) {
-    .register .col-1 img {
-      display: initial;
-    }
-  }
+}
