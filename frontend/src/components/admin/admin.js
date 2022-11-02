@@ -48,6 +48,7 @@ export default function Admin() {
         withCredentials: true,
       })
       .catch((err) => {
+        console.log("Error in getting admin data");
         console.log(err);
       });
     if (res) {
@@ -155,14 +156,12 @@ export default function Admin() {
   }, []);
 
   return (
-    <div className="adminContainer">
-      <div className="adminContainer__header">
-        <h1>Welcome To Admin Page</h1>
-        <Link onClick={handleLogOut} to="/">
-          Log Out
-        </Link>
-      </div>
-
+    <div>
+      <h1>Welcome To Admin Page</h1>
+      <Link onClick={handleLogOut} to="/">
+        Log Out
+      </Link>
+      <br />
       {admin && <Link to="/userRegistration">User Registration</Link>}
       <br />
       {admin && <Link to="/candidateRegistration">Candidate Registration</Link>}
@@ -182,7 +181,7 @@ export default function Admin() {
           );
         })}
       <button type="button" onClick={handleUsers}>
-        Show All User
+        Show All Candidate
       </button>
       {user && <h2>User List</h2>}
       {user &&

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-import "./user.css";
+import "./userLogin.css";
 export default function UserRegistration({ sideImage }) {
   const history = useNavigate();
   //------------------------------------------------------------STATE----------------------------------------------------

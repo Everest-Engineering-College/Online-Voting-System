@@ -234,8 +234,43 @@ input:placeholder-shown {
 .flex-col {
   flex-direction: column;
 }
-@media screen and (min-width: 860px) {
+/* @media screen and (min-width: 860px) {
   .register .col-1 img {
     display: initial;
+  }
+} */
+@media only screen and (max-width: 1024px) {
+  #sideImageUser,
+  #sideImageAdmin,
+  #sideImageCandidate {
+    width: 450px;
+  }
+  #form > div > input {
+    width: 17rem;
+    height: 2.7rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /*Tablets [601px -> 1200px]*/
+  #sideImageUser,
+  #sideImageAdmin,
+  #sideImageCandidate {
+    width: 415px;
+  }
+  #form > div > input {
+    width: 15rem;
+    height: 2.5rem;
+  }
+}
+@media only screen and (max-width: 730px) {
+  #sideImageUser,
+  #sideImageAdmin,
+  #sideImageCandidate {
+    display: none;
+  }
+
+  #form > div > input {
+    width: 15rem;
+    height: 2.5rem;
   }
 }
