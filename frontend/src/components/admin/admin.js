@@ -156,38 +156,57 @@ export default function Admin() {
   }, []);
 
   return (
-    <div>
-      <h1>Welcome To Admin Page</h1>
-      <Link onClick={handleLogOut} to="/">
-        Log Out
-      </Link>
-      <br />
-      {admin && <Link to="/userRegistration">User Registration</Link>}
-      <br />
-      {admin && <Link to="/candidateRegistration">Candidate Registration</Link>}
-      <br />
-      {admin && <h1>{admin.firstName}</h1>}
+    <div className="adminContainer">
+      <div className="adminHeader">
+        <h1>Online Voting</h1>
+        <Link onClick={handleLogOut} to="/">
+          Log Out
+        </Link>
+      </div>
+      <hr></hr>
 
-      <button type="button" onClick={handleCandidate}>
-        Show All Candidate
-      </button>
-      {candidate && <h2>Candidate List</h2>}
-      {candidate &&
-        candidate.map((data) => {
-          return (
-            <h3>
-              {data.firstName} {data.lastName} {data.totalVote}
-            </h3>
-          );
-        })}
-      <button type="button" onClick={handleUsers}>
-        Show All Candidate
-      </button>
-      {user && <h2>User List</h2>}
-      {user &&
-        user.map((data) => {
-          return <h3>{data.firstName}</h3>;
-        })}
+      {admin && (
+        <div className="adminBody">
+          <div className="adminBodyLeft">
+            <h1>Dashboard</h1>
+            <div className="adminBodyLeftItem">
+              {
+                <Link to="/userRegistration">
+                  <p>Create User</p>
+                </Link>
+              }
+
+              {
+                <Link to="/candidateRegistration">
+                  <p>Create Candidate</p>
+                </Link>
+              }
+
+              {/* {admin && <h1>{admin.firstName}</h1>} */}
+
+              <p onClick={handleCandidate}>Show All Candidate</p>
+              {/* show data in right side */}
+              {candidate && <h2>Candidate List</h2>}
+              {candidate &&
+                candidate.map((data) => {
+                  return (
+                    <h3>
+                      {data.firstName} {data.lastName} {data.totalVote}
+                    </h3>
+                  );
+                })}
+              <p onClick={handleUsers}>Show All Candidate</p>
+              {/* show data in right side */}
+              {user && <h2>User List</h2>}
+              {user &&
+                user.map((data) => {
+                  return <h3>{data.firstName}</h3>;
+                })}
+            </div>
+          </div>
+          <div className="adminBodyRight">Admin Body Right.show data here</div>
+        </div>
+      )}
     </div>
   );
 }

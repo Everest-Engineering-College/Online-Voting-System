@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminRegistration({ sideImage }) {
   const [admin, setAdmin] = useState({
@@ -28,13 +29,14 @@ export default function AdminRegistration({ sideImage }) {
     axios(config)
       .then(function(res) {
         console.log(res);
-        alert("Admin Registration Successfull go back to Admin Login Page.");
+        // alert("Admin Registration Successfull go back to Admin Login Page.");
+        useNavigate("/adminlogin");
       })
       .catch(function(err) {
         console.log(err);
         console.log(err.response.status);
         if (err.response.status === 500) {
-          alert("Password Doesnot Match");
+          alert("Password did not match");
         }
       });
   }
